@@ -11,6 +11,7 @@ A robust RESTful API for validating financial transactions with built-in fraud p
 - **Error Handling**: Error responses with validation messages
 - **Logging**: Structured logging with Winston
 - **Input Validation**: Request validation using express-validator
+- **Unit Testing**: Testing service functionality and validator middleware
 
 ## 📋 Prerequisites
 
@@ -159,6 +160,50 @@ transaction-validation-api/
 ├── server.js               # Main server file
 └── package.json            # Dependencies and scripts
 ```
+
+## 🧪 Testing
+
+The project includes comprehensive unit tests using Jest for testing the core business logic and middleware functionality.
+
+### Running Tests
+
+```bash
+# Run all tests
+npm run test
+
+```
+
+### Test Structure
+
+```
+tests/
+├── transaction-service.test.js    # Service layer tests
+└── validation-middleware.test.js  # Validation middleware tests
+```
+
+### Test Coverage
+
+The test suite covers:
+
+**Transaction Service Tests:**
+
+- ✅ Success test case - Approves valid transactions
+- ✅ Sender not found - Rejects unknown senders
+- ✅ Insufficient funds - Rejects low balance transactions
+- ✅ Field required - Handles missing fields gracefully
+- ✅ Rate limit exceeded - Service processes normally
+
+**Validation Middleware Tests:**
+
+- ✅ Sender ID required validation
+- ✅ Amount must be positive validation
+
+### Test Configuration
+
+- **Framework**: Jest with ES modules support
+- **Mocking**: Logger and external dependencies
+- **Environment**: Node.js test environment
+- **Coverage**: Business logic and middleware validation
 
 ## 📊 Logging
 
