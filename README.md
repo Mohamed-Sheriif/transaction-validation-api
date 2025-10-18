@@ -8,14 +8,14 @@ A robust RESTful API for validating financial transactions with built-in fraud p
 - **Fraud Prevention**: Rate limiting to prevent suspicious activity
 - **Balance Management**: Automatic balance updates for approved transactions
 - **Comprehensive Documentation**: Interactive Swagger UI documentation
-- **Error Handling**: Detailed error responses with validation messages
+- **Error Handling**: Error responses with validation messages
 - **Logging**: Structured logging with Winston
 - **Input Validation**: Request validation using express-validator
 
 ## 📋 Prerequisites
 
 - Node.js (v14 or higher)
-- npm or yarn
+- npm
 
 ## 🛠️ Installation
 
